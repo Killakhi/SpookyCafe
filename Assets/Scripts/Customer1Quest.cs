@@ -2,18 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DontDestroy : MonoBehaviour
+public class Customer1Quest : MonoBehaviour
 {
-    public static string valueToKeep;
-   
-
-
     // Start is called before the first frame update
     void Start()
     {
-        DontDestroyOnLoad(gameObject);
         
     }
 
-   
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
 }

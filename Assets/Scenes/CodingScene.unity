@@ -195,6 +195,7 @@ GameObject:
   - component: {fileID: 26190336}
   - component: {fileID: 26190334}
   - component: {fileID: 26190335}
+  - component: {fileID: 26190337}
   m_Layer: 7
   m_Name: zombie
   m_TagString: Untagged
@@ -331,13 +332,17 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   PlayerAttacked: {fileID: 8300000, guid: 51b22600fb796cd48ab242f6c88872c9, type: 3}
+  sr: {fileID: 0}
+  KnockbackForce: 0
   walkPoint: {x: 0, y: 0, z: 0}
   walkPointRange: 5
   timeBetweenAttacks: 1
   sightRange: 10
   attackRange: 1
+  WindUpRange: 0
   playerInSightRange: 0
   playerInAttackRange: 0
+  AttackWindUp: 0
 --- !u!54 &26190336
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -365,6 +370,22 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &26190337
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 26190328}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94ee311e7880c9e48891e50e0f26dad7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 4
+  maxHealth: 4
+  self: {fileID: 26190328}
+  SoulPrefab: {fileID: 0}
 --- !u!1 &86859090
 GameObject:
   m_ObjectHideFlags: 0
@@ -1708,6 +1729,11 @@ MonoBehaviour:
   m_CameraActivatedEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!95 &1015031979 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 8445841187565695632, guid: f40e230befdc41d40878f5961b8711c8, type: 3}
+  m_PrefabInstance: {fileID: 2487009800026066083}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1321804425
 GameObject:
   m_ObjectHideFlags: 0
@@ -2980,6 +3006,10 @@ PrefabInstance:
       propertyPath: maxHeatlh
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 3408065630366593951, guid: f40e230befdc41d40878f5961b8711c8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4556772136151169680, guid: f40e230befdc41d40878f5961b8711c8, type: 3}
       propertyPath: m_Name
       value: Player
@@ -3032,6 +3062,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6364263716984990037, guid: f40e230befdc41d40878f5961b8711c8, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9213055264498613538, guid: f40e230befdc41d40878f5961b8711c8, type: 3}
+      propertyPath: attackAni
+      value: 
+      objectReference: {fileID: 1015031979}
     - target: {fileID: 9213055264498613538, guid: f40e230befdc41d40878f5961b8711c8, type: 3}
       propertyPath: SoulPrefab
       value: 
